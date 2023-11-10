@@ -3,7 +3,7 @@ package com.br.marcelo.API.Deploy.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-
+@Entity
 @Table(name = "tb_account")
 public class Account {
     @Id
@@ -15,8 +15,8 @@ public class Account {
     @Column(scale = 13,precision = 2 )
     private BigDecimal balance;
 
-    @Column(scale = 13,precision = 2 )
-    private BigDecimal limite;
+    @Column(name = "additional_limit ",scale = 13,precision = 2 )
+    private BigDecimal limit;
 
 
     public Long getId() {
@@ -52,10 +52,10 @@ public class Account {
     }
 
     public BigDecimal getLimit() {
-        return limite;
+        return limit;
     }
 
     public void setLimit(BigDecimal limit) {
-        this.limite = limit;
+        this.limit = limit;
     }
 }
