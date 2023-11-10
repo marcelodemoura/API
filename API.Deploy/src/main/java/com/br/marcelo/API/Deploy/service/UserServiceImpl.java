@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
             throw new IllegalArgumentException("This Account number already exists.");
 
         }
-        return userRepository.save(user );
+        return userRepository.save(user);
     }
 
 }
