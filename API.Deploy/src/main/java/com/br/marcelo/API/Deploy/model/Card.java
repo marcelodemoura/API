@@ -2,8 +2,19 @@ package com.br.marcelo.API.Deploy.model;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity(name = "tb_card")
 public class Card {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(unique = true)
+    private String number;
+    @Column(scale = 2, precision = 13)
+    private BigDecimal limite;
 
     public Long getId() {
         return id;
@@ -13,35 +24,19 @@ public class Card {
         this.id = id;
     }
 
-    public Number getLimite() {
-        return limite;
-    }
-
-    public void setLimite(Number limite) {
-        this.limite = limite;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(unique = true)
-    private String number;
-    @Column(scale = 13, precision = 2)
-    private Number limite;
-
-    public String getNumber() {return number;
+    public String getNumber() {
+        return number;
     }
 
     public void setNumber(String number) {
         this.number = number;
     }
 
-    public Number getLimit() {
+    public BigDecimal getLimite() {
         return limite;
     }
 
-    public void setLimit(Number limit) {
-        this.limite = limit;
+    public void setLimite(BigDecimal limite) {
+        this.limite = limite;
     }
 }
