@@ -15,7 +15,8 @@ public class Account {
     @Column(scale = 13,precision = 2 )
     private BigDecimal balance;
 
-    private BigDecimal limit;
+    @Column(scale = 13,precision = 2 )
+    private BigDecimal limite;
 
 
     public Long getId() {
@@ -51,10 +52,10 @@ public class Account {
     }
 
     public BigDecimal getLimit() {
-        return limit;
+        return limite;
     }
 
     public void setLimit(BigDecimal limit) {
-        this.limit = limit;
+        this.limite = limit;
     }
 }

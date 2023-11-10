@@ -9,7 +9,7 @@ public class Card {
     @Column(unique = true)
     private String number;
     @Column(scale = 13, precision = 2)
-    private Number limit;
+    private Number limite;
 
     public String getNumber() {return number;
     }
@@ -19,10 +19,10 @@ public class Card {
     }
 
     public Number getLimit() {
-        return limit;
+        return limite;
     }
 
     public void setLimit(Number limit) {
-        this.limit = limit;
+        this.limite = limit;
     }
 }

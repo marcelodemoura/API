@@ -1,6 +1,8 @@
 package com.br.marcelo.API.Deploy.model;
 
-public class Feature {
+import jakarta.persistence.Entity;
 
-    private F
+@Entity(name = "tb_features")
+public class Feature extends BaseItem {
+
 }

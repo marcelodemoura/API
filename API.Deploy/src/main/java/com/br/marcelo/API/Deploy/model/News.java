@@ -1,22 +1,8 @@
 package com.br.marcelo.API.Deploy.model;
 
-public class News {
-    private String icon;
-    private String description;
+import jakarta.persistence.Entity;
 
-    public String getIcon() {
-        return icon;
-    }
+@Entity(name = "tb_news")
+public class News extends BaseItem {
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
